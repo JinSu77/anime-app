@@ -1,0 +1,25 @@
+.media-card {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 280px;
+}
+
+.media-card .image {
+    height: 230px;
+}
+
+.media-card img {
+    object-fit: cover;
+}
+
+.anime {
+    font-family: 'Montserrat', sans-serif;
+    height: fit-content;
+    color: darkorange;
+
+    font-size: 8px;
+    text-align: center;
+    margin: 8px;
+}
