@@ -56,6 +56,8 @@ export default function Home() {
     }
   }
 
+  console.log("popularAnime", popularAnime);
+
   useEffect(() => {
     const request = (category, delay) => {
       setTimeout(() => getAnime(category), delay);
@@ -116,7 +118,7 @@ export default function Home() {
               </div>
               <div className="popular-anime">
               {popularAnime.map((popAnime) => (
-                <p>{popAnime.title}</p>
+                <p key={popAnime.mal_id}>{popAnime.title}</p>
               ))}
               </div>
               <div className="media-header">
