@@ -56,8 +56,6 @@ export default function Home() {
     }
   }
 
-  console.log("popularAnime", popularAnime);
-
   useEffect(() => {
     const request = (category, delay) => {
       setTimeout(() => getAnime(category), delay);
