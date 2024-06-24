@@ -1,117 +1,139 @@
 .header {
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 15px;
-    margin-bottom: 15px;    
-  }
-  
-  .menu {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .menu h2:first-of-type {
-    color: darkorange;
-  }
-  
-  .search-container {
-    position: relative;
-    background-color: #101010;
-    min-height: 30px;
-    min-width: 275px;
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid white;
-    margin-left: 15px;
-  }
-  
-  .search-input {
-    background: transparent;
-    border: none;
-    color: orange;
-    outline: none;
-    padding: 5px;
-    flex-grow: 1;
-  }
-  
-  .search-input::placeholder {
-    color: rgb(87, 86, 86);
-  }
-  
-  .search-button {
-    background: transparent;
-    border: none;
-    color: orange;
-    cursor: pointer;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .loader {
-    margin-left: 10px;
-    color: orange;
-  }
-  
-  .search-results {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    right: 0;
-    background-color: #1e1e1e;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-height: 300px;
-    overflow-y: auto;
-    z-index: 1000;
-  }
-  
-  .search-result-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #333;
-    cursor: pointer;
-  }
-  
-  .search-result-item:hover {
-    background-color: #333;
-  }
-  
-  .search-result-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    border-radius: 4px;
-  }
-  
-  .search-result-title {
-    color: orange;
-    font-size: 14px;
-  }
-  
-  .logout-button {
-    border: 1px solid #ffa726;
-    color: #ffa726;
-    background: transparent;
-    padding: 6px 16px;
-    font-size: 0.875rem;
-    min-width: 64px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    font-weight: 500;
-    line-height: 1.75;
-    letter-spacing: 0.02857em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .logout-button:hover {
-    background-color: rgba(255, 167, 38, 0.1);
-  }
-  
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;    
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu h2 {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.menu h2:hover {
+  color: darkorange;
+}
+
+.menu h2::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: darkorange;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s;
+}
+
+.menu h2:hover::after {
+  width: 100%;
+}
+
+.search-container {
+  position: relative;
+  background-color: #101010;
+  min-height: 30px;
+  min-width: 275px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid white;
+  margin-left: 15px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: orange;
+  outline: none;
+  padding: 5px;
+  flex-grow: 1;
+}
+
+.search-input::placeholder {
+  color: rgb(87, 86, 86);
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  color: orange;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  margin-left: 10px;
+  color: orange;
+}
+
+.search-results {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  background-color: #1e1e1e;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #333;
+}
+
+.search-result-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.search-result-title {
+  color: orange;
+  font-size: 14px;
+}
+
+.logout-button {
+  border: 1px solid #ffa726;
+  color: #ffa726;
+  background: transparent;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 167, 38, 0.1);
+}

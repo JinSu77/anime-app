@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
 import "./search.css";
-import Header from '../components/Header';
+import Header from '../../components/Header';
 
 export default function SearchPage() {
   const router = useRouter();

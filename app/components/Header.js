@@ -20,18 +20,22 @@ export default function Header() {
   const handleSearch = () => {
     if (query.length > 2) {
       setLoading(true);
-      router.push(`/search?keyword=${query}`);
+      router.push(`/pages/search?keyword=${query}`);
     }
+  };
+
+  const navigateTo = (path) => {
+    router.push(path);
   };
 
   return (
     <div className="header">
       <div className="menu">
-        <h2>HOME</h2>
-        <h2>LISTE ANIME</h2>
-        <h2>NOUVELLE SAISON</h2>
-        <h2>FILMS</h2>
-        <h2>POPULAIRE</h2>
+        <h2 onClick={() => navigateTo('/')}>HOME</h2>
+        <h2 onClick={() => navigateTo('/pages/anime-list')}>LISTE ANIME</h2>
+        <h2 onClick={() => navigateTo('/pages/new-season')}>NOUVELLE SAISON</h2>
+        <h2 onClick={() => navigateTo('/pages/anime-movies')}>FILMS</h2>
+        <h2 onClick={() => navigateTo('/pages/popular')}>POPULAIRE</h2>
       </div>
       <div className="search-container">
         <input
