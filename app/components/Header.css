@@ -5,33 +5,97 @@
     justify-content: space-between;
     margin-top: 15px;
     margin-bottom: 15px;    
-}
-
-.menu {
+  }
+  
+  .menu {
     display: flex;
     gap: 15px;
-}
-
-.menu h2:first-of-type {
-    color:darkorange;
-}
-
-.search-container {
+  }
+  
+  .menu h2:first-of-type {
+    color: darkorange;
+  }
+  
+  .search-container {
+    position: relative;
     background-color: #101010;
     min-height: 30px;
     min-width: 275px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     border-radius: 4px;
     border: 1px solid white;
-    align-items: center;
     margin-left: 15px;
-}
-
-.logout-button {
-    border: 1px solid #ffa726; /* couleur d'avertissement */
-    color: #ffa726; /* couleur d'avertissement */
+  }
+  
+  .search-input {
+    background: transparent;
+    border: none;
+    color: orange;
+    outline: none;
+    padding: 5px;
+    flex-grow: 1;
+  }
+  
+  .search-input::placeholder {
+    color: rgb(87, 86, 86);
+  }
+  
+  .search-button {
+    background: transparent;
+    border: none;
+    color: orange;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .loader {
+    margin-left: 10px;
+    color: orange;
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    background-color: #1e1e1e;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+  }
+  
+  .search-result-item:hover {
+    background-color: #333;
+  }
+  
+  .search-result-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  
+  .search-result-title {
+    color: orange;
+    font-size: 14px;
+  }
+  
+  .logout-button {
+    border: 1px solid #ffa726;
+    color: #ffa726;
     background: transparent;
     padding: 6px 16px;
     font-size: 0.875rem;
@@ -46,7 +110,8 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-
+  
   .logout-button:hover {
-    background-color: rgba(255, 167, 38, 0.1); /* Couleur d'arrière-plan en survol */
+    background-color: rgba(255, 167, 38, 0.1);
   }
+  
